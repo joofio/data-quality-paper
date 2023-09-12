@@ -1,0 +1,121 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage{footnote}
+
+\usepackage{graphicx}
+\usepackage[british]{babel}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{xltabular}
+\usepackage{array}
+\usepackage{svg}
+\usepackage{float} 
+\usepackage{graphicx}
+\graphicspath{ {./imgs/} }
+\newcommand{\comment}[1]{}
+
+
+\usepackage[ruled]{algorithm2e}
+
+\BeforeBeginEnvironment{appendices}{\clearpage}
+
+\newcommand{\algorithmfootnote}[2][\footnotesize]{%
+  \let\old@algocf@finish\@algocf@finish% Store algorithm finish macro
+  \def\@algocf@finish{\old@algocf@finish% Update finish macro to insert "footnote"
+    \leavevmode\rlap{\begin{minipage}{\linewidth}
+    #1#2
+    \end{minipage}}%
+  }%
+}
+
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+\begin{document}
+%
+\title{Interoperable and interpretable Machine Learning based Data quality evaluation in obstetrics real-world data}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{João Coutinho-Almeida\inst{1,2}\orcidID{0000-0003-0882-6547} \and Carlos Saez \inst{}\orcidID{} \and
+Ricardo João Cruz-Correia\inst{1,2}\orcidID{0000-0002-3764-5158} \and
+Pedro Pereira Rodrigues,\inst{1,2}\orcidID{0000-0001-7867-6682} }
+%
+\authorrunning{J. Almeida et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{ CINTESIS - Centre for Health Technologies and Services Research, University of Porto, Portugal \and
+MEDCIDS – Faculty of Medicine of University of Porto, Portugal}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+
+
+
+
+
+\keywords{Data Quality \and Machine-learning \and Bayesian Networks \and Real-world data \and FHIR}
+\end{abstract}
+%
+%Breast Cancer; personalised medicine; disease characteristics; machine learning; Cost-effectiveness; data warehousing; data integration
+%
+\section{Introduction}
+\input{sections/intro}
+
+\section{Background and Related Work}
+%deve ser assim?os dois?ou separar?
+\input{sections/relatedwork}
+
+\section{Materials}
+\input{sections/materials}
+
+\section{Methods}
+\input{sections/methods}
+
+\section{Results}
+\input{sections/results}
+
+\section{Discussion}
+\input{sections/discussion}
+
+\section{Conclusion}
+\input{sections/conclusion}
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+% \bibliographystyle{splncs04}
+% \bibliography{mybibliography}
+%
+%\begin{thebibliography}{8}
+%\bibliographystyle{splncs04}
+\bibliographystyle{unsrt}
+
+\bibliography{bibliography}
+%\end{thebibliography}
+\appendix
+
+\section{Data Dictionary}
+\label{appendix:data_dict}
+\input{sections/appendix1}
+
+
+
+
+\end{document}
