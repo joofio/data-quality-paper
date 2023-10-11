@@ -27,13 +27,7 @@ Plausibility & Atemporal Plausibility           & outlier-tree                  
 
 \end{table}
 The method of scoring was to obtain a single value that could grasp the quality of the row or patient.
-%TC:ignore
-%\begin{figure}[htbp]
-%\centering
-%\caption{Scoring Method}\label{fig:scoring} 
-%\includegraphics[scale=0.38]{imgs/workflow.png}
-%\end{figure}
-%TC:endignore
 
-To assess the tool's usefulness, we will implement it in a production environment and collect metrics regarding the data being produced. Then we intended to present some of the results to obstetrics clinicians for them to assess how likely the information is to be suitable for usage.
+
+To assess the tool's usefulness, we will implement it in a production environment and collect metrics regarding the data being produced. Then we intended to present some results to selected obstetrics clinicians for them to assess how likely the information is to be suitable for usage. We will also compare the results with the ones from the model to make sanity checks regarding the model's performance and adequacy. The metrics of agreements will be the Cohen kappa and a ranking metric -  Normalized Discounted Cumulative Gain (NDCG) \cite{wangTheoreticalAnalysisNDCG} which is the sum of the true scores ranked in the order induced by the predicted scores, after applying a logarithmic discount. Then divide by the best possible score to obtain a score between 0 and 1.
 
