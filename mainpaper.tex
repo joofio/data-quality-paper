@@ -2,10 +2,11 @@
 % LLNCS macro package for Springer Computer Science proceedings;
 % Version 2.20 of 2017/10/04
 %
-\documentclass[runningheads]{llncs}
+\documentclass[]{article}
 %
+\usepackage{url}
 \usepackage{footnote}
-
+\usepackage{setspace}
 \usepackage{graphicx}
 \usepackage[british]{babel}
 \usepackage[ruled,vlined]{algorithm2e}
@@ -20,8 +21,9 @@
 \usepackage{graphicx}
 \graphicspath{ {./imgs/} }
 \newcommand{\comment}[1]{}
-
+\usepackage[affil-it]{authblk} % For author affiliations
 \usepackage[ruled]{algorithm2e}
+\usepackage[paperheight=10in,paperwidth=6.5in,margin=2cm,headsep=.5cm,top=2.5cm,headheight=1cm]{geometry}
 
 \BeforeBeginEnvironment{appendices}{\clearpage}
 
@@ -40,35 +42,73 @@
 % If you use the hyperref package, please uncomment the following line
 % to display URLs in blue roman font according to Springer's eBook style:
 % \renewcommand\UrlFont{\color{blue}\rmfamily}
-\begin{document}
+\doublespacing
+%\begin{document}
 %
-\title{Interoperable Machine Learning based Data Quality Evaluation in obstetrics real-world data}
+\title{Development and Validation of a Data Quality Evaluation Tool in Obstetrics Real-World Data through HL7-FHIR interoperable Bayesian Networks and Expert Rules}
 %
 %\titlerunning{Abbreviated paper title}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
-\author{João Coutinho-Almeida\inst{1,2}\orcidID{0000-0003-0882-6547} \and Carlos Saez \inst{}\orcidID{} \and
-Ricardo João Cruz-Correia\inst{1,2}\orcidID{0000-0002-3764-5158} \and
-Pedro Pereira Rodrigues,\inst{1,2}\orcidID{0000-0001-7867-6682} }
+
+\author[1,*]{João Coutinho-Almeida}
+\author[2]{Carlos Saez}
+\author[2]{Ricardo João Cruz-Correia}
+\author[3]{Pedro Pereira Rodrigues}
+\affil[1]{\small Department, Organization, Street, City, 100190, State, Country}
+\affil[2]{Department, Organization, Street, City, 10587, State, Country}
+\affil[3]{Department, Organization, Street, City, 610101, State, Country}
+\affil[*]{Corresponding author: \texttt{user\_id@university.edu}}
+
+\date{}  % Remove date
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  \textbf{Background:} The increasing prevalence of Electronic Health Records (EHRs) in healthcare systems globally has underscored the importance of data quality for clinical decision-making and research, particularly in obstetrics. High-quality data is vital for an accurate representation of patient populations and to avoid erroneous healthcare decisions. However, existing studies have highlighted significant challenges in EHR data quality, necessitating innovative tools and methodologies for effective data quality assessment and improvement.
+
+  \textbf{Objective:} This paper addresses the critical need for reliable data quality evaluation in obstetrics by developing a novel tool. The tool utilizes Health Level 7 (HL7) Fast Healthcare Interoperable Resources (FHIR) standards in conjunction with Bayesian Networks and expert rules, offering a comprehensive approach to assessing data quality in real-world obstetrics data.
+  
+  \textbf{Methods:} A harmonized framework focusing on Completeness, Plausibility, and Conformance underpins our methodology. We employed Bayesian networks for advanced probabilistic modeling, integrated outlier detection methods, and a rule-based system grounded in domain-specific knowledge. The development and validation of the tool were based on obstetrics data from nine Portuguese hospitals, spanning the years 2019 to 2020.
+  
+  \textbf{Results:} The developed tool demonstrated strong potential for identifying data quality issues in obstetrics EHRs. Bayesian networks used in the tool showed high performance for various features. Preliminary evaluations can reach AUROC of as high as 88\%. The tool's infrastructure and interoperable format as a FHIR API enables a possible deployment of a real-time data quality assessment in obstetrics settings. 
+  
+  \textbf{Conclusion:} This study contributes significantly to the field of EHR data quality assessment, with a specific focus on obstetrics. The combination of HL7-FHIR interoperability, machine learning techniques, and expert knowledge presents a robust, adaptable solution to the challenges of healthcare data quality. Future research should explore tailored data quality evaluations for different healthcare contexts, as well as further validation of the tool capabilities, enhancing the tool's utility across diverse medical domains.
+\end{abstract}
+
+\textbf{Keywords}: Data Quality, Machine-learning, FHIR, Real-world data, Bayesian Networks
+
+
+%\author{\inst{1,2}\orcidID{0000-0003-0882-6547} \and  \inst{}\orcidID{} \and
+%\inst{1,2}\orcidID{0000-0002-3764-5158} \and
+%,\inst{1,2}\orcidID{0000-0001-7867-6682} }
 %
-\authorrunning{J. Almeida et al.}
+%\authorrunning{J. Almeida et al.}
+
+% Affiliations
+%\affil{Affiliation One, Department, University}
+%\affil{Affiliation Two, Department, University}
+
+
 % First names are abbreviated in the running head.
 % If there are more than two authors, 'et al.' is used.
 %
-\institute{ CINTESIS - Centre for Health Technologies and Services Research, University of Porto, Portugal \and
-MEDCIDS – Faculty of Medicine of University of Porto, Portugal}
+%\institute{ CINTESIS@RISE - Centre for Health Technologies and Services Research, University of Porto, Portugal \and
+%MEDCIDS – Faculty of Medicine of University of Porto, Portugal}
 %
-\maketitle              % typeset the header of the contribution
+%\maketitle              % typeset the header of the contribution
 %
-\begin{abstract}
+%\begin{abstract}
 
 
 
 
 
-\keywords{Data Quality \and Machine-learning \and Bayesian Networks \and Real-world data \and FHIR}
-\end{abstract}
+%\keywords{Data Quality \and Machine-learning \and Bayesian Networks \and Real-world data \and FHIR}
+%\end{abstract}
 %
 %Breast Cancer; personalised medicine; disease characteristics; machine learning; Cost-effectiveness; data warehousing; data integration
 %
@@ -76,7 +116,6 @@ MEDCIDS – Faculty of Medicine of University of Porto, Portugal}
 \input{sections/intro}
 
 \section{Background and Related Work}
-%deve ser assim?os dois?ou separar?
 \input{sections/relatedwork}
 
 \section{Materials}
