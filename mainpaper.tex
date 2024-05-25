@@ -45,21 +45,24 @@
 \doublespacing
 %\begin{document}
 %
-\title{Development and Validation of a Data Quality Evaluation Tool in Obstetrics Real-World Data through HL7-FHIR interoperable Bayesian Networks and Expert Rules}
+\title{Development and Initial Validation of a Data Quality Evaluation Tool in Obstetrics Real-World Data through HL7-FHIR interoperable Bayesian Networks and Expert Rules}
 %
 %\titlerunning{Abbreviated paper title}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
 
-\author[1,*]{João Coutinho-Almeida}
-\author[2]{Carlos Saez}
-\author[2]{Ricardo João Cruz-Correia}
-\author[3]{Pedro Pereira Rodrigues}
-\affil[1]{\small Department, Organization, Street, City, 100190, State, Country}
-\affil[2]{Department, Organization, Street, City, 10587, State, Country}
-\affil[3]{Department, Organization, Street, City, 610101, State, Country}
-\affil[*]{Corresponding author: \texttt{user\_id@university.edu}}
+\author[1,2,3,*]{João Coutinho-Almeida}
+\author[4]{Carlos Saez}
+\author[1,2,3]{Ricardo João Cruz-Correia}
+\author[1,2,3]{Pedro Pereira Rodrigues}
+\affil[1]{\small CINTESIS@RISE - Centre for Health Technologies and Services Research, University of Porto, Portugal}
+\affil[2]{MEDCIDS – Faculty of Medicine of University of Porto, Portugal}
+\affil[3]{Health Data Science PhD Program, Faculty of Medicine of the University of Porto, Porto, Portugal}
+\affil[4]{Instituto Universitario de Aplicaciones de las Tecnologías de la Información y de las Comunicaciones Avanzadas. Universitat Politècnica de València.,Camino de Vera s/n,Valencia, España}
+
+
+\affil[*]{Corresponding author: \texttt{joaofilipe90@gmail.com}}
 
 \date{}  % Remove date
 
@@ -70,11 +73,11 @@
 \begin{abstract}
   \textbf{Background:} The increasing prevalence of Electronic Health Records (EHRs) in healthcare systems globally has underscored the importance of data quality for clinical decision-making and research, particularly in obstetrics. High-quality data is vital for an accurate representation of patient populations and to avoid erroneous healthcare decisions. However, existing studies have highlighted significant challenges in EHR data quality, necessitating innovative tools and methodologies for effective data quality assessment and improvement.
 
-  \textbf{Objective:} This paper addresses the critical need for reliable data quality evaluation in obstetrics by developing a novel tool. The tool utilizes Health Level 7 (HL7) Fast Healthcare Interoperable Resources (FHIR) standards in conjunction with Bayesian Networks and expert rules, offering a comprehensive approach to assessing data quality in real-world obstetrics data.
+  \textbf{Objective:} This paper addresses the critical need for data quality evaluation in obstetrics by developing a novel tool. The tool utilizes Health Level 7 (HL7) Fast Healthcare Interoperable Resources (FHIR) standards in conjunction with Bayesian Networks and expert rules, offering a novel approach to assessing data quality in real-world obstetrics data.
   
   \textbf{Methods:} A harmonized framework focusing on Completeness, Plausibility, and Conformance underpins our methodology. We employed Bayesian networks for advanced probabilistic modeling, integrated outlier detection methods, and a rule-based system grounded in domain-specific knowledge. The development and validation of the tool were based on obstetrics data from nine Portuguese hospitals, spanning the years 2019 to 2020.
   
-  \textbf{Results:} The developed tool demonstrated strong potential for identifying data quality issues in obstetrics EHRs. Bayesian networks used in the tool showed high performance for various features. Preliminary evaluations can reach AUROC of as high as 88\%. The tool's infrastructure and interoperable format as a FHIR API enables a possible deployment of a real-time data quality assessment in obstetrics settings. 
+  \textbf{Results:} The developed tool demonstrated strong potential for identifying data quality issues in obstetrics EHRs. Bayesian networks used in the tool showed high performance for various features with AUROC between 75 and 97\%. The tool's infrastructure and interoperable format as a FHIR API enables a possible deployment of a real-time data quality assessment in obstetrics settings. Our initial assessments show promised, even when compared with physicians assessment of real records, the tool can reach AUROC of 88\%, depending on the threshold defined. Our results also show that obstetrics clinical records are difficult to assess in terms of quality and assessments like ours could benefit from more categorical approaches of ranking between bad and good quality.
   
   \textbf{Conclusion:} This study contributes significantly to the field of EHR data quality assessment, with a specific focus on obstetrics. The combination of HL7-FHIR interoperability, machine learning techniques, and expert knowledge presents a robust, adaptable solution to the challenges of healthcare data quality. Future research should explore tailored data quality evaluations for different healthcare contexts, as well as further validation of the tool capabilities, enhancing the tool's utility across diverse medical domains.
 \end{abstract}
@@ -115,13 +118,16 @@
 \section{Introduction}
 \input{sections/intro}
 
-\section{Background and Related Work}
+%\section{Background and Related Work}
 \input{sections/relatedwork}
+In this paper, we aim to achieve the following objectives:
+(1) Identify and Explain Potential Issues in Full Deployment: We aim to enlighten readers on the various challenges and issues that may arise when fully deploying a tool designed for improving data quality in obstetrics. This involves a detailed analysis of potential technical, operational, and ethical concerns. (2) Develop a Single Data Quality Score: We propose the creation of a comprehensive single score for data quality. This score will facilitate the comparison of high-quality and low-quality records within a database, enabling a more standardized and efficient assessment of data quality. (3) Evaluate Tool Performance in Early-Stage Real-World Scenarios: Our objective is to assess how the proposed tool functions in early-stage real-world scenarios. This includes examining its effectiveness in collaboration with obstetricians and identifying practical strategies for improving data quality based on real-world feedback and conditions.
 
-\section{Materials}
+\section{Materials \& Methods}
+\subsection{Material}
 \input{sections/materials}
 
-\section{Methods}
+\subsection{Methods}
 \input{sections/methods}
 
 \section{Results}
