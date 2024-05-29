@@ -19,6 +19,8 @@
 \usepackage{svg}
 \usepackage{float} 
 \usepackage{graphicx}
+\usepackage{soul}
+
 \graphicspath{ {./imgs/} }
 \newcommand{\comment}[1]{}
 \usepackage[affil-it]{authblk} % For author affiliations
@@ -120,8 +122,8 @@
 
 %\section{Background and Related Work}
 \input{sections/relatedwork}
-In this paper, we aim to achieve the following objectives:
-(1) Identify and Explain Potential Issues in Full Deployment: We aim to enlighten readers on the various challenges and issues that may arise when fully deploying a tool designed for improving data quality in obstetrics. This involves a detailed analysis of potential technical, operational, and ethical concerns. (2) Develop a Single Data Quality Score: We propose the creation of a comprehensive single score for data quality. This score will facilitate the comparison of high-quality and low-quality records within a database, enabling a more standardized and efficient assessment of data quality. (3) Evaluate Tool Performance in Early-Stage Real-World Scenarios: Our objective is to assess how the proposed tool functions in early-stage real-world scenarios. This includes examining its effectiveness in collaboration with obstetricians and identifying practical strategies for improving data quality based on real-world feedback and conditions.
+\hl{In this paper, we aim to achieve the following objectives:
+(1) Identify and Explain Potential Issues in Full Deployment: We aim to enlighten readers on the various challenges and issues that may arise when fully deploying a tool designed for improving data quality in obstetrics. This involves a detailed analysis of potential technical, operational, and ethical concerns. (2) Develop a Single Data Quality Score: We propose the creation of a comprehensive single score for data quality. This score will facilitate the comparison of high-quality and low-quality records within a database, enabling a more standardized and efficient assessment of data quality. (3) Evaluate Tool Performance in Early-Stage Real-World Scenarios: Our objective is to assess how the proposed tool functions in early-stage real-world scenarios. This includes examining its effectiveness in collaboration with obstetricians and identifying practical strategies for improving data quality based on real-world feedback and conditions.}
 
 \section{Materials \& Methods}
 \subsection{Material}
@@ -138,6 +140,23 @@ In this paper, we aim to achieve the following objectives:
 
 \section{Conclusion}
 \input{sections/conclusion}
+
+
+
+
+\section*{Funding Statement}
+This research received no specific grant from any funding agency in the public, commercial or not-for-profit sectors
+
+\section*{Competing Interests Statement}
+The authors declare that they have no competing interests.
+
+
+\section*{Contributorship Statement}
+J.A contributed with Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Project administration, Resources, Software, Validation, Visualization,Writing - original draft and Writing - review \& editing.
+C.S contributed with Conceptualization, Formal analysis, Methodology, Visualization and Writing - review \& editing.
+R.C contributed with Conceptualization, Supervision and Writing - review \& editing.
+P.R contributed with Conceptualization, Supervision and Writing - review \& editing.
+
 %
 % ---- Bibliography ----
 %
